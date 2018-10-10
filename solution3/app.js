@@ -20,7 +20,6 @@
             
             var promise = MenuSearchService.getMatchedMenuItems(ctr.searchTerm);
             promise.then(function(found){
-                console.log(found);
                 ctr.found = found;
             });
         }
