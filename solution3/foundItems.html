@@ -1,9 +1,25 @@
-<div class="found-items-list">
+<div class="found-items-list" ng-if="items.length > 0">
     <ul>
-       <li ng-repeat="item in items">
+        <li class="for-titles">
+            <div class="row">
+                <div class="col-md-4">
+                    <b>SHORT NAME</b>
+               </div>
+               <div class="col-md-4">
+                    <b>DESCRIPTION</b> 
+               </div>
+               <div class="col-md-4">
+                   <b>ACTIONS</b>
+               </div>
+           </div>
+        </li>
+        <li ng-repeat="item in items">
            <div class="row">
-               <div class="col-md-8">
-                    {{ item.name }} 
+                <div class="col-md-4">
+                    {{ item.short_name }} 
+               </div>
+               <div class="col-md-4">
+                    {{ item.description }} 
                </div>
                <div class="col-md-4">
                    <button ng-click="onRemove({index: $index})" class="btn btn-danger btn-block">Don't want this one!</button>
@@ -11,4 +27,7 @@
            </div>
         </li> 
     </ul>
+</div>
+<div class="text-danger" ng-if="items.length <= 0">
+    <b>nothing found !!</b>
 </div>

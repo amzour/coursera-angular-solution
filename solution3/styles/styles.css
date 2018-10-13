@@ -21,3 +21,9 @@ h1 {
   display: block;
   padding: 7px 0;
 }
+
+.found-items-list ul li.for-titles
+{
+  padding: 7px 0;
+  border-bottom: 1px solid #ccc;
+}

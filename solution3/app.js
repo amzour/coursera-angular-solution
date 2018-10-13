@@ -12,11 +12,13 @@
     function NarrowItDownController(MenuSearchService)
     {
         var ctr         = this;
-        ctr.found       = [];
         ctr.searchTerm  = "";
         ctr.getItems    = function(){
             if(!ctr.searchTerm)
+            {
+                ctr.found = [];
                 return;
+            }
             
             var promise = MenuSearchService.getMatchedMenuItems(ctr.searchTerm);
             promise.then(function(found){
