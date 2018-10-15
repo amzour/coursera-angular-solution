@@ -2,26 +2,32 @@
     <ul>
         <li class="for-titles">
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-3">
+                    <b>NAME</b>
+               </div>
+                <div class="col-md-3">
                     <b>SHORT NAME</b>
                </div>
-               <div class="col-md-4">
+               <div class="col-md-3">
                     <b>DESCRIPTION</b> 
                </div>
-               <div class="col-md-4">
+               <div class="col-md-3">
                    <b>ACTIONS</b>
                </div>
            </div>
         </li>
         <li ng-repeat="item in items">
            <div class="row">
-                <div class="col-md-4">
+               <div class="col-md-3">
+                    {{ item.name }} 
+               </div>
+                <div class="col-md-3">
                     {{ item.short_name }} 
                </div>
-               <div class="col-md-4">
+               <div class="col-md-3">
                     {{ item.description }} 
                </div>
-               <div class="col-md-4">
+               <div class="col-md-3">
                    <button ng-click="onRemove({index: $index})" class="btn btn-danger btn-block">Don't want this one!</button>
                </div>
            </div>
